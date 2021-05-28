@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>ONG Ayuda a un peludo - Gatos</title>
+        <title>ONG Ayuda a un peludo</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/validaciones.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="js/galeria-imagenes.js"></script>
-        <script src="js/seccion-gatos.js"></script>
+        <script src="js/registro-login.js"></script>
+                                                                                                  
     </head>
     <body>
         <div class="container bg-light d-flex flex-column sticky-footer-wrapper min-vh-100">
             <header class="jumbotron">
-                
                 <h1 class="text-center">
                     <img src="img/logo.png" class="rounded-circle" alt="logo"/>
                     <span class="text-nowrap">ONG Ayuda a un Peludo</span>
                 </h1>
                 <p class="text-justify">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                    Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis,
-                    earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, 
-                    repellat vitaes!
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis, earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, repellat vitae!
                 </p>
             </header>
-
+            
             <nav class="navbar navbar-expand-md bg-light">
                 
                 <a class="navbar-brand" href="#">
@@ -47,50 +44,51 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="seccion-perros.html">Perros</a>
-                            <a class="dropdown-item active" href="seccion-gatos.html">Gatos</a>
+                            <a class="dropdown-item" href="seccion-gatos.html">Gatos</a>
                         </div>
-                    </li>
+                        </li>
 
                     <li class="nav-item">
-                        
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    <a class="nav-link" href="contacto.html">Contacto</a> 
                     </li>
 
                     <div class='col-md-12 text-right'>
                         <a href="registro.html"> <button type="button" class="btn btn-warning">
-                            Registrarse </button> </a>
-                        <a href="login.html"> <button type="button" class="btn btn-info">
-                            Iniciar Sesion </button> </a>     
+                            Registrarse </button> </a>    
                     </div>
+
                 </ul>
             </nav>
-            <main class="flex-fill">            
-                <div class="row">
-                    <div class="col-12">
-                        <section>
-                            <h2>
-                                Gatos
-                            </h2> 
-                            <!-- ****************************AGREGAMOS COMBOBOX GATOS******************************************* -->
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect">Raza</label>
-                            <select class="form-control" id="cmb_gatos">
-                              <option value="0">-- Seleccione una raza --</option>
-                              <option value="1">Cualquiera</option>
-                              <option value="2">Mestizo</option>
-                              <option value="3">Siamés</option>
-                              <option value="4">Persa</option>
-                              <option value="5">Bombay</option>
-                              <option value="6">Birmano</option>
-                            </select>
-                          </div>
-                            
-                            <table  id="lista-gatos" class="table text-center">
+
+            <main class="flex-fill">
+                <section>
+                    <h2>INICIAR SESION</h2>
+                    <div class="form-group"><!-- POR EL ID : formulario-contacto se hacen las validaciones -->
+                        <form id="login" name="login" action="login-exitoso.html" method="POST" >
+
+                                <div class="col-md-6 offset-md-3">
+                                    <label for="fieldUsuario">
+                                            Usuario(*)<span class="alert alert-danger" role="alert"></span> 
+                                    </label>                       
+                                    <input id="fieldUsuario" class="form-control" type="text" name="Usuario" />
+                                </div>
                                 
-                            </table>
-                        </section>
+                                <div class="col-md-6 offset-md-3">
+                                    <label for="fieldContraseña">
+                                            Contraseña(*)<span class="alert alert-danger" role="alert"></span> 
+                                    </label>                       
+                                    <input id="fieldContraseña" class="form-control" type="password" name="contraseña" />
+                                </div>
+                                
+                            
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-success" name="submit">Ingresar</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </div>
+                </section>      
             </main>
             <footer>
                 <div class="row bg-dark">
@@ -99,7 +97,7 @@
                             Instituto Profesional Duoc UC
                     </div>
                 </div>
-            </footer>   
+            </footer>      
         </div>
     </body>
 </html>

@@ -10,7 +10,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="js/formulario-contacto.js"></script>
+        <script src="js/registro-login.js"></script>
                                                                                                   
     </head>
     <body>
@@ -52,9 +52,7 @@
                     <a class="nav-link" href="contacto.html">Contacto</a> 
                     </li>
                     <div class='col-md-12 text-right'>
-                        <a href="registro.html"> <button type="button" class="btn btn-warning">
-                            Registrarse </button> </a>
-                        <a href="registro.html"> <button type="button" class="btn btn-info">
+                        <a href="login.html"> <button type="button" class="btn btn-info">
                             Iniciar Sesion </button> </a>     
                     </div>
 
@@ -64,15 +62,15 @@
             <main class="flex-fill">
                 <section>
                     <h2>REGISTRO</h2>
-                    <div class="form-group">
-                        <form id="formulario-contacto" name="formularioContacto" action="formulario-enviado.html" method="POST" >
+                    <div class="form-group"><!-- POR EL ID : formulario-contacto se hacen las validaciones -->
+                        <form id="registro" name="registro" action="login-exitoso.html" method="POST" >
 
                             
                                 <div class="col-md-6 offset-md-3">
-                                    <label for="fieldNombre">
+                                    <label for="fieldNombreCompleto">
                                             Nombre Completo(*)<span class="alert alert-danger" role="alert"></span> 
                                     </label>                       
-                                    <input id="fieldNombre" class="form-control" type="text" name="nombre" />
+                                    <input id="fieldNombreCompleto" class="form-control" type="text" name="nombreCompleto" />
                                 </div>
 
                                 <div class="col-md-6 offset-md-3">
