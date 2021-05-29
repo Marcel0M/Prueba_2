@@ -1,9 +1,23 @@
 $(document).ready(function(){
 
+
+    function validarEnteroEnCampo(identificadorDelCampo) {
+        let field = document.getElementById(identificadorDelCampo);
+        let valueInt = parseInt(field.value);
+        if (!Number.isInteger(valueInt)) {
+          return false;
+        } else {
+          field.value = valueInt;
+          return true;
+        }
+      }
+    
+
     // ocultar todos los div que tengan class "alert" y se encuentren
     // dentro de un elemento cuyo id es "formulario-contacto".
     $("#registro span.alert").hide();
     $("#login span.alert").hide();
+
     
 
     // función encargada de verificar si el valor del parámetro fieldValue
@@ -54,16 +68,17 @@ $(document).ready(function(){
         validarCampoVacio(valorIngresado, "fieldEmail");
     });
 
-    // asocia en el evento blur del elemento de formulario con id "fieldNombre" la llamada a la
+    // asocia en el evento blur del elemento de formulario con id "fieldUsuario" la llamada a la
     // función de validar si el campo es vacío.
     $("#fieldUsuario").blur(function(){
         valorIngresado = $(this).val();
-        console.log("El usuario ha dejado el campo nombre con el valor: '"+valorIngresado+"'");
+        console.log("El usuario ha dejado el campo usuario con el valor: '"+valorIngresado+"'");
 
         validarCampoVacio(valorIngresado, "fieldUsuario");
     });
 
-
+    // asocia en el evento blur del elemento de formulario con id "fieldContraseña" la llamada a la
+    // función de validar si el campo es vacío.
     $("#fieldContraseña").blur(function(){
         valorIngresado = $(this).val();
         console.log("El usuario ha dejado el campo nombre con el valor: '"+valorIngresado+"'");
