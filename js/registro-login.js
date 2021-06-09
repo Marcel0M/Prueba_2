@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*******$(document).ready(function(){
 
 
     function validarEnteroEnCampo(identificadorDelCampo) {
@@ -106,6 +106,6 @@ $(document).ready(function(){
 
         return true;
     })
-});
+}); ******/
 
 

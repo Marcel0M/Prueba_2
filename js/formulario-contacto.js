@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
     // ocultar todos los div que tengan class "alert" y se encuentren
@@ -99,5 +98,3 @@ $(document).ready(function(){
         return true;
     })
 });
-
-
